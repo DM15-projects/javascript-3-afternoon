@@ -38,10 +38,9 @@ class Employee {
     this.age = age;
   }
   makeWidget() {
-    return this.first_name + " " + this.last_name + " " + "Widget";
+    return this.first_name + " " + this.last_name + " Widget";
   }
 }
-Employee();
 
 ////////// PROBLEM 2 //////////
 
@@ -61,15 +60,29 @@ Employee();
 
 //Code Here
 class Manager extends Employee {
-  constructor(first_name, last_name, email, age, reports) {
+  constructor(first_name, last_name, email, age) {
     super(first_name, last_name, email, age);
     this.reports = [];
   }
-  hire(Employee) {
-    this.reports.push(Employee);
+  hire(employee) {
+    this.reports.push(employee);
   }
-  fire(Employee) {}
+  fire(index) {
+    this.reports.splice(index, 1);
+  }
 }
+// class Manager extends Employee {
+//   constructor(first_name, last_name, email, age) {
+//     super(first_name, last_name, email, age);
+//     this.reports = [];
+//   }
+//   hire(employee) {
+//     this.reports.push(employee);
+//   }
+//   fire(index) {
+//     this.reports.splice(index, 1);
+//   }
+// }
 ////////// PROBLEM 3 //////////
 
 /*

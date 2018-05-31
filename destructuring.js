@@ -90,11 +90,15 @@ function ingredients(obj) {
 */
 
 //Code Here
-// largeNumbers = obj => {
-//   for (var key in obj) {
-//     return Math.min(key);
-//   }
-// };
+function largeNumbers({ first, second, third }) {
+  if (first < second && first < third) {
+    return first;
+  } else if (second < first && second < third) {
+    return second;
+  } else {
+    return third;
+  }
+}
 ////////// PROBLEM 6 //////////
 
 /*
@@ -104,4 +108,17 @@ function ingredients(obj) {
 */
 
 //Code Here
-function numberGroups() {}
+// function numberGroups(obj) {}
+function numberGroups(obj) {
+  var long = 0;
+  var longest;
+  for (var key in obj) {
+    // console.log(obj[key].length)
+    // if(obj[key].length>obj[key-1]){
+    if (obj[key].length > long) {
+      long = obj[key].length;
+      longest = obj[key];
+    }
+  }
+  return longest;
+}
