@@ -30,8 +30,18 @@
 */
 
 //Code Here
-
-
+class Employee {
+  constructor(first_name, last_name, email, age) {
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+  }
+  makeWidget() {
+    return this.first_name + " " + this.last_name + " " + "Widget";
+  }
+}
+Employee();
 
 ////////// PROBLEM 2 //////////
 
@@ -50,9 +60,16 @@
 */
 
 //Code Here
-
-
-
+class Manager extends Employee {
+  constructor(first_name, last_name, email, age, reports) {
+    super(first_name, last_name, email, age);
+    this.reports = [];
+  }
+  hire(Employee) {
+    this.reports.push(Employee);
+  }
+  fire(Employee) {}
+}
 ////////// PROBLEM 3 //////////
 
 /*
@@ -76,8 +93,6 @@
 */
 
 //Code Here
-
-
 
 ////////// PROBLEM 4 - Black Diamond //////////
 
@@ -103,5 +118,3 @@
 */
 
 //Code Here
-
-
